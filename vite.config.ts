@@ -1,5 +1,5 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vite';
+import { defineConfig, searchForWorkspaceRoot } from 'vite';
 
 export default defineConfig({
 	plugins: [sveltekit()],
@@ -8,6 +8,11 @@ export default defineConfig({
 			scss: {
 				silenceDeprecations: ['import', 'mixed-decls', 'color-functions', 'global-builtin']
 			}
+		}
+	},
+	server: {
+		fs: {
+			allow: [searchForWorkspaceRoot(process.cwd())]
 		}
 	}
 });

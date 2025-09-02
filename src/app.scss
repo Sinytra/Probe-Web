@@ -1,1 +1,78 @@
+$font-family-serif: 'Lora', 'Times New Roman', serif;
+$font-family-sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-base: $font-family-serif !default;
+$btn-font-family: $font-family-sans-serif !default;
+$headings-font-family: $font-family-sans-serif !default;
+
+$font-size-base: 1.125rem;
+$font-size-xl: 27px;
+$body-color: #404040;
+
 @import 'bootstrap/scss/bootstrap';
+@import 'css/fonts.scss';
+
+$navbar-height: 60px;
+
+body {
+	background-color: #fcfcfc;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 800;
+}
+
+a {
+	text-decoration: none;
+}
+
+.highlight {
+	font-weight: $font-weight-semibold;
+}
+
+.divider-short {
+	border-top: 4px solid $body-color;
+	border-radius: 3px;
+	opacity: 100%;
+	width: 7rem;
+}
+
+.subheading {
+	font-family: $font-family-sans-serif;
+	font-weight: $font-weight-light;
+	font-size: $font-size-xl;
+}
+
+nav {
+	font-family: $font-family-sans-serif;
+	font-weight: $font-weight-medium;
+}
+
+.navbar {
+	border-bottom: 1px solid #dddddd;
+}
+
+.navbar-brand {
+	color: #272727;
+}
+
+main {
+	padding-top: calc($navbar-height + 1rem);
+}
+
+.heading {
+	//font-size: $font-size-lg;
+}
+@include media-breakpoint-up(xl) {
+	.heading {
+		font-size: 4rem;
+	}
+}
+
+.serif {
+	font-family: $font-family-serif;
+}
