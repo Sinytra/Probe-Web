@@ -6,7 +6,6 @@ import globals from 'globals';
 import { fileURLToPath } from 'node:url';
 import ts from 'typescript-eslint';
 import svelteConfig from './svelte.config.ts';
-import eslintPluginBetterTailwindcss from 'eslint-plugin-better-tailwindcss';
 
 const gitignorePath = fileURLToPath(new URL('./.gitignore', import.meta.url));
 
@@ -35,30 +34,6 @@ export default ts.config(
 				extraFileExtensions: ['.svelte'],
 				parser: ts.parser,
 				svelteConfig
-			}
-		}
-	},
-	{
-		plugins: {
-			'better-tailwindcss': eslintPluginBetterTailwindcss
-		},
-		rules: {
-			// enable all recommended rules to report a warning
-			...eslintPluginBetterTailwindcss.configs['recommended-warn'].rules,
-
-			'better-tailwindcss/multiline': [
-				'warn',
-				{
-					printWidth: 120,
-					preferSingleLine: true,
-					group: 'never',
-					callees: ['clsx', 'cva', 'ctl', 'twMerge', 'cn']
-				}
-			]
-		},
-		settings: {
-			'better-tailwindcss': {
-				entryPoint: 'src/app.css'
 			}
 		}
 	}
