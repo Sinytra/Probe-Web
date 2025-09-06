@@ -14,7 +14,7 @@ $body-color: #404040;
 $navbar-height: 60px;
 
 body {
-	background-color: #fcfcfc;
+  background-color: #fcfcfc;
 }
 
 h1,
@@ -23,56 +23,65 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 800;
+  font-weight: 800;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .highlight {
-	font-weight: $font-weight-semibold;
+  font-weight: $font-weight-semibold;
 }
 
 .divider-short {
-	border-top: 4px solid $body-color;
-	border-radius: 3px;
-	opacity: 100%;
-	width: 7rem;
+  border-top: 4px solid $body-color;
+  border-radius: 3px;
+  opacity: 100%;
+  width: 7rem;
 }
 
 .subheading {
-	font-family: $font-family-sans-serif;
-	font-weight: $font-weight-light;
-	font-size: $font-size-xl;
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-light;
+  font-size: $font-size-xl;
 }
 
 nav {
-	font-family: $font-family-sans-serif;
-	font-weight: $font-weight-medium;
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-medium;
 }
 
 .navbar {
-	border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
 }
 
 .navbar-brand {
-	color: #272727;
+  color: #272727;
 }
 
 main {
-	padding-top: calc($navbar-height + 1rem);
+  padding-top: calc($navbar-height + 1rem);
 }
 
 .heading {
-	//font-size: $font-size-lg;
+  //font-size: $font-size-lg;
 }
+
 @include media-breakpoint-up(xl) {
-	.heading {
-		font-size: 4rem;
-	}
+  .heading {
+    font-size: 4rem;
+  }
 }
 
 .serif {
-	font-family: $font-family-serif;
+  font-family: $font-family-serif;
+}
+
+.fs-7 {
+  font-size: 16px;
+}
+
+.w-fit {
+  width: fit-content;
 }

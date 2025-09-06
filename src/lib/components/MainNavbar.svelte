@@ -1,6 +1,5 @@
 <script lang="ts">
 	import {
-		Collapse,
 		NavbarToggler,
 		NavbarBrand,
 		Nav,
@@ -13,30 +12,30 @@
 	import OpenCollectiveIcon from '$lib/icons/OpenCollectiveIcon.svelte';
 	import ConnectorLogo from '$lib/assets/connector_logo.png';
 	import { beforeNavigate } from '$app/navigation';
+	import { onMount } from 'svelte';
 
-	let isOpen = false;
+	let collapse: HTMLDivElement;
+	let bootstrap: typeof import('bootstrap');
 
-	beforeNavigate(() => {
-		isOpen = false;
+	onMount(async () => {
+		bootstrap =  await import('bootstrap');
 	});
 
-	function handleUpdate(event: CustomEvent<boolean>) {
-		isOpen = event.detail;
-	}
+	beforeNavigate(async () => {
+		bootstrap?.Collapse.getOrCreateInstance(collapse, { toggle: false })?.hide();
+	});
 </script>
 
 <Navbar color="warning-subtle" light expand="md" container="md" fixed="top">
 	<img alt="Logo" src={ConnectorLogo} width="40px" class="d-none d-md-block me-md-2" />
-	<NavbarBrand class="fw-semibold" href="/">Sinytra Connector</NavbarBrand>
-	<NavbarToggler on:click={() => (isOpen = !isOpen)} />
+	<NavbarBrand class="fw-bold" style="color: #404040;" href="/">Sinytra Connector</NavbarBrand>
+	<NavbarToggler data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+								 aria-label="Toggle navigation" />
 
-	<Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
+	<div bind:this={collapse} class="collapse navbar-collapse" id="navbarNav">
 		<Nav class="ms-auto" navbar>
 			<NavItem>
-				<NavLink href="/latest">Latest</NavLink>
-			</NavItem>
-			<NavItem>
-				<NavLink href="/">Releases</NavLink>
+				<NavLink href="/compatibility">Compatibility</NavLink>
 			</NavItem>
 
 			<NavItem>
@@ -71,5 +70,5 @@
 				</NavLink>
 			</NavItem>
 		</Nav>
-	</Collapse>
+	</div>
 </Navbar>
