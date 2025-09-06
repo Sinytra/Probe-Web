@@ -9,11 +9,11 @@
 		children: Snippet;
 	}
 
-	let {icon, color, children}: Props = $props();
+	let { icon, color, children }: Props = $props();
 </script>
 
 <div class="alert d-flex align-items-center {`alert-${color}`}" role="alert">
-	<Fa icon={icon} class="me-2" />
+	<Fa {icon} class="me-2" />
 	<div>
 		{@render children?.()}
 	</div>

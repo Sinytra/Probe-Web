@@ -21,8 +21,8 @@
 		<p class="my-4 text-start">
 			<b>Sinytra Connector</b> is a <i>compatibility layer</i> that allows running <i>Fabric</i>
 			mods on <i>NeoForge</i>. Its goal is to bring the two platforms closer together, saving
-			developers time and effort maintaining their mods for multiple platforms at once, as well
-			as allowing players to play <i>all their favourite mods</i> in one modpack.
+			developers time and effort maintaining their mods for multiple platforms at once, as well as
+			allowing players to play <i>all their favourite mods</i> in one modpack.
 		</p>
 
 		<hr class="my-4" />

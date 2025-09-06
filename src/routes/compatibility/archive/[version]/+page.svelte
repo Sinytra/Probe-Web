@@ -24,12 +24,13 @@
 		<h2 class="text-center mb-4">Mod compatibility test results</h2>
 
 		<p>
-			Below you can find mod compatibility test results for Connector version <code>{version}</code>.
+			Below you can find mod compatibility test results for Connector version <code>{version}</code
+			>.
 		</p>
 
 		<p class="mb-4">
-			The tests were conducted on Connector version <code>{info.version}</code>,
-			built for Minecraft <code>{info.mcVersion}</code>.
+			The tests were conducted on Connector version <code>{info.version}</code>, built for Minecraft
+			<code>{info.mcVersion}</code>.
 		</p>
 
 		<div class="mb-4">

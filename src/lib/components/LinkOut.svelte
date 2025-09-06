@@ -14,11 +14,7 @@
 	let { href, target, class: className, children }: Props = $props();
 </script>
 
-<a
-	class={clsx('mx-2 text-nowrap', className)}
-	{href}
-	{target}
->
+<a class={clsx('mx-2 text-nowrap', className)} {href} {target}>
 	{@render children?.()}
 	<Fa icon={faArrowUpRightFromSquare} />
 </a>

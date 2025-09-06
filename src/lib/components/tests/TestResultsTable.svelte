@@ -50,7 +50,9 @@
 						<div class="row">
 							<div class="col-2 px-0">
 								{run.result && run.result.output?.success
-									? (run.result.errors ? ICON_WARN : ICON_CHECK)
+									? run.result.errors
+										? ICON_WARN
+										: ICON_CHECK
 									: ICON_X}
 							</div>
 							<div class="col col-10 text-center">
@@ -60,9 +62,7 @@
 					</div>
 				</td>
 				<td>
-					<LinkOut href="https://modrinth.com/mod/{run.project.slug}" target="_blank">
-						Link
-					</LinkOut>
+					<LinkOut href="https://modrinth.com/mod/{run.project.slug}" target="_blank">Link</LinkOut>
 				</td>
 			</tr>
 		{/each}
