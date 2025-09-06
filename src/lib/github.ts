@@ -2,7 +2,7 @@ import { Octokit } from 'octokit';
 import type { components } from '@octokit/openapi-types';
 import type { TestReport } from '$lib/types';
 
-interface TestedRelease {
+export interface TestedRelease {
 	name: string;
 	tagName: string;
 	tests_url: string;
