@@ -7,7 +7,9 @@
 	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
 		<div class="text-nowrap me-auto">
 			<p class="col-md-4 mb-0 text-body-secondary">© 2025 Sinytra</p>
-			<span class="small">This website is <a href="https://github.com/Sinytra/Probe-Web">open source</a>.</span>
+			<span class="small"
+				>This website is <a href="https://github.com/Sinytra/Probe-Web">open source</a>.</span
+			>
 		</div>
 
 		<a

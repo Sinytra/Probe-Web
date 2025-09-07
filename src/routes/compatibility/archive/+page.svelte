@@ -8,7 +8,7 @@
 </script>
 
 <CenteredContainer>
-	<h2 class="text-center">Release history</h2>
+	<h1 class="text-center">Release history</h1>
 
 	<p class="my-4">Below you can find a list of all tested Connector releases.</p>
 

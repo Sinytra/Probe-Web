@@ -6,9 +6,7 @@
 	import ModrinthIcon from '$lib/icons/ModrinthIcon.svelte';
 </script>
 
-<h2>
-	Downloads
-</h2>
+<h2>Downloads</h2>
 
 <p class="my-4">
 	Connector is available for download on all major platforms as well as on its GitHub repository.

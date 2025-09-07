@@ -14,7 +14,7 @@ $body-color: #404040;
 $navbar-height: 60px;
 
 body {
-  background-color: #fcfcfc;
+	background-color: #fcfcfc;
 }
 
 h1,
@@ -23,99 +23,116 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 800;
+	font-weight: 800;
 }
 
 h6 {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .highlight {
-  font-weight: $font-weight-semibold;
+	font-weight: $font-weight-semibold;
 }
 
 .divider-short {
-  border-top: 4px solid $body-color;
-  border-radius: 3px;
-  opacity: 100%;
-  width: 7rem;
+	border-top: 4px solid $body-color;
+	border-radius: 3px;
+	opacity: 100%;
+	width: 7rem;
 }
 
 .subheading {
-  font-family: $font-family-sans-serif;
-  font-weight: $font-weight-light;
-  font-size: $font-size-xl;
+	font-family: $font-family-sans-serif;
+	font-weight: $font-weight-light;
+	font-size: $font-size-xl;
 }
 
 nav {
-  font-family: $font-family-sans-serif;
-  font-weight: $font-weight-medium;
+	font-family: $font-family-sans-serif;
+	font-weight: $font-weight-medium;
 }
 
 .navbar {
-  border-bottom: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
 }
 
 .navbar-brand {
-  color: #272727;
+	color: #272727;
 }
 
 main {
-  padding-top: calc($navbar-height + 1rem);
+	padding-top: calc($navbar-height + 1rem);
 }
 
 .heading {
-  //font-size: $font-size-lg;
+	//font-size: $font-size-lg;
 }
 
 @include media-breakpoint-up(xl) {
-  .heading {
-    font-size: 4rem;
-  }
+	.heading {
+		font-size: 4rem;
+	}
 }
 
 .serif {
-  font-family: $font-family-serif;
+	font-family: $font-family-serif;
 }
 
 .fs-7 {
-  font-size: 16px;
+	font-size: 16px;
 }
 
 .w-fit {
-  width: fit-content;
+	width: fit-content;
 }
 
 .button-curseforge {
-  background-color: #F16436;
-  border-color: #F16436;
+	background-color: #f16436;
+	border-color: #f16436;
 }
 
 .button-curseforge:hover {
-  background-color: #C65022;
-  border-color: #C65022;
+	background-color: #c65022;
+	border-color: #c65022;
 }
 
 .button-modrinth {
-  background-color: #00AF5C;
-  border-color: #00AF5C;
+	background-color: #00af5c;
+	border-color: #00af5c;
 }
 
 .button-modrinth:hover {
-  background-color: #058848;
-  border-color: #058848;
+	background-color: #058848;
+	border-color: #058848;
 }
 
 .button-github {
-  background-color: black;
-  border-color: black;
+	background-color: black;
+	border-color: black;
 }
 
 .button-github:hover {
-  background-color: #2C2C2C;
-  border-color: #2C2C2C;
+	background-color: #2c2c2c;
+	border-color: #2c2c2c;
+}
+
+.prose h1 {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.prose h2,
+h3,
+h4 {
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+
+.vertical-middle {
+  top: 50%;
+  translate: 0 -50%;
 }

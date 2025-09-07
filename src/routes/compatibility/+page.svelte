@@ -16,7 +16,7 @@
 
 <div class="mx-auto">
 	<CenteredContainer>
-		<h2 class="text-center mb-4">Mod compatibility test results</h2>
+		<h1 class="text-center mb-4">Mod compatibility test results</h1>
 
 		<p>Below you can find mod compatibility test results for the latest release of Connector.</p>
 
@@ -45,8 +45,6 @@
 
 		<TestEnvironmentInfo {report} />
 	</CenteredContainer>
-
-	<h4 class="mb-4">Test results</h4>
 
 	<TestResultsTable runs={report.results} />
 </div>

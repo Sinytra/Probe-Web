@@ -21,7 +21,7 @@
 			Click <a href="/compatibility">here</a> to see the latest results.
 		</IconAlert>
 
-		<h2 class="text-center mb-4">Mod compatibility test results</h2>
+		<h1 class="text-center mb-4">Mod compatibility test results</h1>
 
 		<p>
 			Below you can find mod compatibility test results for Connector version <code>{version}</code
@@ -43,8 +43,6 @@
 
 		<TestEnvironmentInfo {report} />
 	</CenteredContainer>
-
-	<h4 class="mb-4">Test results</h4>
 
 	<TestResultsTable runs={report.results} />
 </div>

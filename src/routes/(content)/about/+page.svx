@@ -1,0 +1,26 @@
+# About
+
+**Sinytra Connector** is a compatibility layer that allows running Fabric mods on NeoForge.
+
+Its goal is to bring the two platforms closer together, saving developers time and effort maintaining their mods for
+multiple platforms at once, as well as allowing players to play all their favourite mods in one modpack.
+
+## The team
+
+Connector is maintained by [**Sinytra**](https://github.com/Sinytra), a team of passionate developers working on various
+projects related to cross-loader Minecraft modding with an emphasis on open-source principles and collaboration with the
+community.
+
+Our mission is to provide developers and users in modding with powerful and free tools to make their everyday lives
+easier.
+
+## Related projects
+
+Check out our other projects!
+
+- [**📖 _Modded Minecraft Wiki_**](https://moddedmc.wiki) - find & host mod documentation
+
+- [**🧵 _Forgified Fabric API_**](https://modrinth.com/mod/forgified-fabric-api) - develop using the Fabric API on
+  NeoForge
+
+...and more to come!

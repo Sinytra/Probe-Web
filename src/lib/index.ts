@@ -38,3 +38,14 @@ export function getReleaseNameInfo(tag: string): ReleaseInfo {
 	const parts = tag.split('+');
 	return { version: parts[0], mcVersion: parts[1] };
 }
+
+export function paginate<T>(array: T[], pageSize: number, pageNumber: number) {
+	return array.slice((pageNumber - 1) * pageSize, pageNumber * pageSize);
+}
+
+export function preventDefault(fn: () => void) {
+	return function (event: Event) {
+		event.preventDefault();
+		fn();
+	};
+}
