@@ -6,6 +6,7 @@
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
 	import { faSearch } from '@fortawesome/free-solid-svg-icons';
+	import { building } from '$app/environment';
 	import Fa from 'svelte-fa';
 
 	interface Props {
@@ -16,7 +17,7 @@
 	let top: HTMLElement;
 	let search: string = $state('');
 
-	const pageParam = $derived(page.url.searchParams.get('page'));
+	const pageParam = $derived(building ? null : page.url.searchParams.get('page'));
 
 	const filtered = $derived(search.length < 1 ? runs : runs.filter(r => r.project.name.toLowerCase().includes(search.toLowerCase())));
 	const pages = $derived(Math.ceil(filtered.length / 100.0));
