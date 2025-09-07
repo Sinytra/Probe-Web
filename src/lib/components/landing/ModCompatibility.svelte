@@ -36,7 +36,7 @@
 				Latest tests: <span class="highlight">{info.version}</span> for Minecraft
 				<span class="highlight">{info.mcVersion}</span>
 			</div>
-			<div>Tested on {formatDateTime(release.created_at)}</div>
+			<div>Released on {formatDateTime(release.created_at)}</div>
 		{/if}
 	</div>
 </div>
