@@ -12,6 +12,10 @@
 <svelte:head>
 	<link rel="icon" href={favicon} />
 	<script src={scriptSrc}></script>
+
+	<meta name="og:title" content="Sinytra Connector" />
+	<meta name="og:description" content="Run your favourite Fabric mods on NeoForge" />
+	<meta name="og:image" content="/banner.png" />
 </svelte:head>
 
 <MainNavbar />

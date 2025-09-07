@@ -41,8 +41,6 @@
 			<TestAccuracyNotice />
 		</div>
 
-		<h4 class="mb-4">Test environment</h4>
-
 		<TestEnvironmentInfo {report} />
 	</CenteredContainer>
 
