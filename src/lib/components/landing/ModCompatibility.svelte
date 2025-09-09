@@ -2,6 +2,7 @@
 	import { formatDateTime, getReleaseNameInfo } from '$lib';
 	import { Button } from '@sveltestrap/sveltestrap';
 	import type { TestedRelease } from '$lib/github';
+	import ModSearchBar from '$lib/components/search/ModSearchBar.svelte';
 
 	interface Props {
 		release: TestedRelease | null;
@@ -16,7 +17,19 @@
 </h2>
 
 <p class="my-3">
-	Check our <i>automated</i> compatibility test results below to see if your mod is listed.
+	Use the search bar below to check the compatibility status of a mod of your choice.
+</p>
+
+<div class="py-4">
+	<ModSearchBar class="mx-auto" />
+</div>
+
+<div class="divider">
+	<span>OR</span>
+</div>
+
+<p class="my-3">
+	Check our <i>automated</i> compatibility test results for an overview of compatible mods.
 </p>
 
 <div class="py-2">

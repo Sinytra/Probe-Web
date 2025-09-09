@@ -44,15 +44,15 @@
 			</NavItem>
 
 			<NavItem>
-				<NavLink href="https://moddedmc.wiki/en/project/connector">Docs</NavLink>
-			</NavItem>
-
-			<NavItem>
 				<NavLink href="/about">About</NavLink>
 			</NavItem>
 
 			<NavItem>
 				<NavLink href="/faq">FAQ</NavLink>
+			</NavItem>
+
+			<NavItem>
+				<NavLink href="https://moddedmc.wiki/en/project/connector">Docs</NavLink>
 			</NavItem>
 
 			<NavItem class="py-2">

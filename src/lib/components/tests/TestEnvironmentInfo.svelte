@@ -9,7 +9,7 @@
 	}
 
 	let { report }: Props = $props();
-	let { durationSeconds, testedAt, environment } = report;
+	let { duration_seconds, tested_at, environment } = report;
 	let testCount = report.results.length;
 
 	let compatibleCount = report.results.filter(r => r.result?.output?.success === true).length;
@@ -20,7 +20,8 @@
 <Container fluid>
 	<Row class="justify-content-between gap-2">
 		<Col class="px-0 col-auto">
-			<TestSummaryTable {compatibleCount} {incompatibleCount} {errorCount} {durationSeconds} {testedAt} {testCount} />
+			<TestSummaryTable {compatibleCount} {incompatibleCount} {errorCount} durationSeconds={duration_seconds}
+												testedAt={tested_at} {testCount} />
 		</Col>
 		<Col class="px-0 col-auto">
 			<TestEnvironmentTable {environment} />

@@ -1,14 +1,14 @@
 export interface TestProject {
 	id: string;
 	name: string;
-	iconUrl: string;
+	icon_url: string;
 	slug: string;
-	versionId: string;
+	version_id: string;
 }
 
 export interface TestOutput {
 	success: boolean;
-	primaryModid?: string;
+	primary_modid?: string;
 }
 
 export interface TestResult {
@@ -18,23 +18,23 @@ export interface TestResult {
 
 export interface TestRun {
 	project: TestProject;
-	versionNumber: string;
+	version_number: string;
 	result?: TestResult;
 }
 
 export interface TestEnvironment {
-	transformerVersion: string | null;
-	transformerHash: string | null;
-	runnerVersion: string | null;
-	neoFormRuntimeVersion: string;
-	neoForgeVersion: string;
-	gameVersion: string;
-	compatibleGameVersions: string[];
+	transformer_version: string | null;
+	transformer_hash: string | null;
+	runner_version: string | null;
+	neoform_runtime_version: string;
+	neoforge_version: string;
+	game_version: string;
+	compatible_game_versions: string[];
 }
 
 export interface TestReport {
 	results: TestRun[];
 	environment: TestEnvironment;
-	durationSeconds: number;
-	testedAt: string;
+	duration_seconds: number;
+	tested_at: string;
 }

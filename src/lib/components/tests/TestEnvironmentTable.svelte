@@ -18,7 +18,7 @@
 			<th>Connector version</th>
 			<td>
 				<code>
-					<b>{environment.transformerVersion || '-'}</b>
+					<b>{environment.transformer_version || '-'}</b>
 				</code>
 			</td>
 		</tr>
@@ -26,7 +26,7 @@
 			<th>Probe runner version</th>
 			<td>
 				<code>
-					{environment.runnerVersion || '-'}
+					{environment.runner_version || '-'}
 				</code>
 			</td>
 		</tr>
@@ -35,7 +35,7 @@
 			<th>Neoform runtime version</th>
 			<td>
 				<code>
-					{environment.neoFormRuntimeVersion}
+					{environment.neoform_runtime_version}
 				</code>
 			</td>
 		</tr>
@@ -44,7 +44,7 @@
 			<th>NeoForge version</th>
 			<td>
 				<code>
-					{environment.neoForgeVersion}
+					{environment.neoforge_version}
 				</code>
 			</td>
 		</tr>
@@ -53,7 +53,7 @@
 			<th>Game version</th>
 			<td>
 				<code>
-					{environment.gameVersion}
+					{environment.game_version}
 				</code>
 			</td>
 		</tr>
@@ -62,7 +62,7 @@
 			<th>Compatible game versions</th>
 			<td>
 				<code>
-					{environment.compatibleGameVersions.join(', ')}
+					{environment.compatible_game_versions.join(', ')}
 				</code>
 			</td>
 		</tr>

@@ -147,3 +147,86 @@ h4 {
     position: absolute;
   }
 }
+
+.absolute-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+
+  @include media-breakpoint-up(xs) {
+    width: 90vw;
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: 384px;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 484px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 600px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 600px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: 700px;
+  }
+}
+
+.sans-serif {
+  font-family: $font-family-sans-serif;
+}
+
+.hover-bg-body-secondary:hover {
+  background-color: $gray-200;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: $secondary-text-emphasis;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid $border-color;
+}
+
+.divider:not(:empty)::before {
+  margin-right: 0.75em;
+  margin-left: 5%;
+}
+
+.divider:not(:empty)::after {
+  margin-left: 0.75em;
+  margin-right: 5%;
+}
+
+.bg-orange-subtle {
+  background-color: $orange-100;
+}
+
+.w-md-fit {
+  width: 100%;
+
+  @include media-breakpoint-up(md) {
+    width: fit-content;
+  }
+}
+
+.hover-text-body-secondary:hover {
+  color: $body-secondary-color !important;
+}

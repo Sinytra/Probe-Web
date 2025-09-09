@@ -67,15 +67,15 @@
 	{#each data as run (run.project.id)}
 		<tr>
 			<td style="width: 40px; text-align: center">
-				<img alt={run.project.slug} src={run.project.iconUrl} height="32px" />
+				<img alt={run.project.slug} src={run.project.icon_url} height="32px" />
 			</td>
 			<td class="fw-medium">
 				{run.project.name}
 			</td>
-			<td>{run.versionNumber}</td>
+			<td>{run.version_number}</td>
 			<td>
 				<code>
-					{run.result?.output?.primaryModid || '-'}
+					{run.result?.output?.primary_modid || '-'}
 				</code>
 			</td>
 			<td>

@@ -9,6 +9,11 @@ export const ICON_EXCLAMATION = '\u2757';
 export const GITHUB_LINK_CONNECTOR = 'https://github.com/Sinytra/Connector';
 export const DISCORD_LINK = 'https://discord.sinytra.org';
 
+export function formatDate(utcString: string): string {
+	const date = new Date(utcString);
+	return format(date, 'yyyy-MM-dd');
+}
+
 export function formatDateTime(utcString: string): string {
 	const date = new Date(utcString);
 	return format(date, 'yyyy-MM-dd HH:mm');
