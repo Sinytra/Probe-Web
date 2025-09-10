@@ -2,6 +2,7 @@ import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import type { Config } from '@sveltejs/kit';
 import { mdsvex } from 'mdsvex';
+import rehypeSlug from 'rehype-slug';
 
 const config: Config = {
 	// Consult https://svelte.dev/docs/kit/integrations
@@ -9,7 +10,7 @@ const config: Config = {
 	preprocess: [
 		vitePreprocess(),
 		// @ts-expect-error this is fine
-		mdsvex()
+		mdsvex({ rehypePlugins: [rehypeSlug] })
 	],
 	kit: {
 		adapter: adapter({

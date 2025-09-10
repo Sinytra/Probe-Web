@@ -19,6 +19,15 @@ Backports to Minecraft versions older than 1.20.1 are **not planned**. Our focus
 compatibility will improve over time as major blockers are patched upstream,
 such as [Mixin](https://github.com/Sinytra/Connector/discussions/383) or transformable mc libraries.
 
+## Possible issues
+
+When playing certain mods via Connector, it is possible that some functionality may work slightly different than
+expected. This is not caused by Connector's presence itself, but rather happens due to specific interactions between
+Fabric mods, Mixins, patched NeoForge code and other mods.
+
+If you have found a behavioral issue in a mod, please [report it to us](#reporting-issues).
+**Do not report any Fabric mod issues to their authors when using Connector.**
+
 ## Is OptiFine compatible?
 
 OptiFine is **not compatible** with FFAPI / Connector, as is the case with many other mods, regardless of the modloader.
@@ -26,8 +35,7 @@ Instead, we recommend using some of the available alternatives:
 
 - [Embeddium](https://modrinth.com/mod/embeddium) (Forge port of Sodium focused on improved compatibility)
 - [Oculus](https://modrinth.com/mod/oculus) (Forge port of Iris)
-- [Continuity](https://www.curseforge.com/minecraft/mc-mods/continuity) (Connected textures, runs on Connector, requires
-  [Lazurite](https://curseforge.com/minecraft/mc-mods/lazurite) to work properly)
+- [Continuity](https://www.curseforge.com/minecraft/mc-mods/continuity) (Connected textures, runs on Connector)
 - [Entity Model Features](https://www.curseforge.com/minecraft/mc-mods/entity-model-features) (Custom Entity Models)
 
 ## Can I use a Forge mod with its Fabric addons and vice versa?
@@ -89,7 +97,7 @@ help you out in the [#support](https://discord.com/channels/1141048834177388746/
 opening a thread, please make sure
 to provide a description of your issue and include the necessary game logs.
 
-#### Confirmed bugs / Forge mod interference
+#### Confirmed bugs / mod interference
 
 Connector bugs should be submitted on our [issue tracker](https://github.com/Sinytra/Connector/issues).
 Each issue is reviewed and processed equally, so even if we can't get to you immediately, please bear with us.
