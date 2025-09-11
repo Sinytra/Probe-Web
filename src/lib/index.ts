@@ -3,11 +3,10 @@ import { format, intervalToDuration } from 'date-fns';
 export const ICON_CHECK = '\u2705';
 export const ICON_X = '\u274C';
 export const ICON_WARN = '\u26A0\uFE0F';
-export const ICON_TEST = '\uD83E\uDDEA';
-export const ICON_EXCLAMATION = '\u2757';
 
 export const GITHUB_LINK_CONNECTOR = 'https://github.com/Sinytra/Connector';
 export const DISCORD_LINK = 'https://discord.sinytra.org';
+export const CONNECTOR_ISSUE_TRACKER = 'https://github.com/Sinytra/Connector/issues';
 
 export function formatDate(utcString: string): string {
 	const date = new Date(utcString);
