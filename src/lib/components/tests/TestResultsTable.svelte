@@ -19,7 +19,11 @@
 
 	const pageParam = $derived(building ? null : page.url.searchParams.get('page'));
 
-	const filtered = $derived(search.length < 1 ? runs : runs.filter(r => r.project.name.toLowerCase().includes(search.toLowerCase())));
+	const filtered = $derived(
+		search.length < 1
+			? runs
+			: runs.filter((r) => r.project.name.toLowerCase().includes(search.toLowerCase()))
+	);
 	const pages = $derived(Math.ceil(filtered.length / 100.0));
 	const paramPage = $derived(pageParam ? Number(pageParam) : 1);
 	let currentPage = $derived(Math.min(paramPage, pages));
@@ -39,9 +43,19 @@
 <h4 class="mb-4" bind:this={top}>Test results</h4>
 
 <div class="w-fit mb-3 me-auto position-relative">
-	<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-				 style="padding-left: 2.2rem" bind:value={search} />
-	<Fa icon={faSearch} class="position-absolute vertical-middle text-body-secondary" style="left: 12px;" />
+	<input
+		class="form-control me-2"
+		type="search"
+		placeholder="Search"
+		aria-label="Search"
+		style="padding-left: 2.2rem"
+		bind:value={search}
+	/>
+	<Fa
+		icon={faSearch}
+		class="position-absolute vertical-middle text-body-secondary"
+		style="left: 12px;"
+	/>
 </div>
 
 <Table bordered responsive>
@@ -54,51 +68,51 @@
 		<col />
 	</colgroup>
 	<thead>
-	<tr>
-		<th>Icon</th>
-		<th>Project</th>
-		<th>Version</th>
-		<th>Mod ID</th>
-		<th>Result</th>
-		<th>Link</th>
-	</tr>
+		<tr>
+			<th>Icon</th>
+			<th>Project</th>
+			<th>Version</th>
+			<th>Mod ID</th>
+			<th>Result</th>
+			<th>Link</th>
+		</tr>
 	</thead>
 	<tbody>
-	{#each data as run (run.project.id)}
-		<tr>
-			<td style="width: 40px; text-align: center">
-				<img alt={run.project.slug} src={run.project.icon_url} height="32px" />
-			</td>
-			<td class="fw-medium">
-				{run.project.name}
-			</td>
-			<td>{run.version_number}</td>
-			<td>
-				<code>
-					{run.result?.output?.primary_modid || '-'}
-				</code>
-			</td>
-			<td>
-				<div class="mx-auto px-4">
-					<div class="row">
-						<div class="col-2 px-0">
-							{run.result && run.result.output?.success
-								? run.result.errors
-									? ICON_WARN
-									: ICON_CHECK
-								: ICON_X}
-						</div>
-						<div class="col col-10 text-center">
-							{run.result?.output?.success ? 'Compatible' : 'Incompatible'}
+		{#each data as run (run.project.id)}
+			<tr>
+				<td style="width: 40px; text-align: center">
+					<img alt={run.project.slug} src={run.project.icon_url} height="32px" />
+				</td>
+				<td class="fw-medium">
+					{run.project.name}
+				</td>
+				<td>{run.version_number}</td>
+				<td>
+					<code>
+						{run.result?.output?.primary_modid || '-'}
+					</code>
+				</td>
+				<td>
+					<div class="mx-auto px-4">
+						<div class="row">
+							<div class="col-2 px-0">
+								{run.result && run.result.output?.success
+									? run.result.errors
+										? ICON_WARN
+										: ICON_CHECK
+									: ICON_X}
+							</div>
+							<div class="col col-10 text-center">
+								{run.result?.output?.success ? 'Compatible' : 'Incompatible'}
+							</div>
 						</div>
 					</div>
-				</div>
-			</td>
-			<td>
-				<LinkOut href="https://modrinth.com/mod/{run.project.slug}" target="_blank">Link</LinkOut>
-			</td>
-		</tr>
-	{/each}
+				</td>
+				<td>
+					<LinkOut href="https://modrinth.com/mod/{run.project.slug}" target="_blank">Link</LinkOut>
+				</td>
+			</tr>
+		{/each}
 	</tbody>
 </Table>
 
@@ -109,6 +123,7 @@
 		</button>
 	</PaginationItem>
 
+	<!-- eslint-disable-next-line -->
 	{#each { length: pages } as p, i (i)}
 		<PaginationItem active={currentPage === i + 1}>
 			<button class="page-link" onclick={preventDefault(() => setPage(i + 1))}>{i + 1}</button>

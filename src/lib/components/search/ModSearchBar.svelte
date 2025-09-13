@@ -106,15 +106,24 @@
 	<form onsubmit={goRunTest} class="text-center">
 		<div class="d-flex flex-row gap-1 justify-content-center">
 			<div class="position-relative">
-				<input class="form-control" type="search" placeholder="Search Modrinth..." aria-label="Search"
-							 style="padding-left: 2.2rem"
-							 disabled={testing}
-							 onfocus={openSearch}
-							 onblur={closeSearch}
-							 bind:this={inputElement}
-							 bind:value={search} required
+				<input
+					class="form-control"
+					type="search"
+					placeholder="Search Modrinth..."
+					aria-label="Search"
+					style="padding-left: 2.2rem"
+					disabled={testing}
+					onfocus={openSearch}
+					onblur={closeSearch}
+					bind:this={inputElement}
+					bind:value={search}
+					required
 				/>
-				<Fa icon={faSearch} class="position-absolute vertical-middle text-body-secondary" style="left: 12px;" />
+				<Fa
+					icon={faSearch}
+					class="position-absolute vertical-middle text-body-secondary"
+					style="left: 12px;"
+				/>
 			</div>
 			<Button color="primary" type="submit" disabled={searching || testing} style="width: 108px">
 				{#if testing}
@@ -133,13 +142,15 @@
 
 	{#if showResults && (slowSearching || results)}
 		<div class="absolute-container bg-white rounded-1 shadow-sm" style="top: 48px;">
-			<ListGroup class={results && results.total_hits > 0 ? 'rounded-bottom-0 border-bottom-0' : ''}>
+			<ListGroup
+				class={results && results.total_hits > 0 ? 'rounded-bottom-0 border-bottom-0' : ''}
+			>
 				{#if results !== null}
-
 					{#each results.hits as hit (hit.project_id)}
-						<ListGroupItem class="hover-bg-body-secondary cursor-pointer d-flex flex-row gap-2 p-2"
-													 onmousedown={e => e.preventDefault()}
-													 onclick={() => selectResult(hit)}
+						<ListGroupItem
+							class="hover-bg-body-secondary cursor-pointer d-flex flex-row gap-2 p-2"
+							onmousedown={(e) => e.preventDefault()}
+							onclick={() => selectResult(hit)}
 						>
 							<img class="rounded-1" alt={hit.slug} src={hit.icon_url} width="36px" height="36px" />
 							<div class="d-flex flex-column text-start text-truncate">
@@ -154,15 +165,10 @@
 							Showing <b>{results.hits.length}</b> out of <b>{results.total_hits}</b> hits
 						</ListGroupItem>
 					{:else}
-						<ListGroupItem class="h-auto fs-6 fw-semibold">
-							No results found.
-						</ListGroupItem>
+						<ListGroupItem class="h-auto fs-6 fw-semibold">No results found.</ListGroupItem>
 					{/if}
-
 				{:else}
-					<ListGroupItem class="h-auto fs-6 py-3">
-						Searching for mods...
-					</ListGroupItem>
+					<ListGroupItem class="h-auto fs-6 py-3">Searching for mods...</ListGroupItem>
 				{/if}
 			</ListGroup>
 		</div>
@@ -170,9 +176,10 @@
 </div>
 
 {#if testingSlug}
-	<ModTestingDisplay slug={testingSlug}
-										 onstart={() => testing = true}
-										 onfinish={finishTesting}
-										 onclose={() => testingSlug = null}
+	<ModTestingDisplay
+		slug={testingSlug}
+		onstart={() => (testing = true)}
+		onfinish={finishTesting}
+		onclose={() => (testingSlug = null)}
 	/>
 {/if}

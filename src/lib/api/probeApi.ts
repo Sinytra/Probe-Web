@@ -21,7 +21,7 @@ export interface TestProject {
 	platform: ProjectPlatform;
 }
 
-export type ResultType = 'TESTED' | 'NATIVE' | 'UNAVAILABLE';
+export type ResultType = 'tested' | 'native' | 'unavailable';
 
 export interface ModCompatBaseResponse {
 	project: TestProject;
@@ -29,7 +29,7 @@ export interface ModCompatBaseResponse {
 }
 
 export interface ModCompatTestedResponse extends ModCompatBaseResponse {
-	type: 'TESTED';
+	type: 'tested';
 	modid: string;
 	version_number: string;
 	version_id: string;
@@ -39,12 +39,12 @@ export interface ModCompatTestedResponse extends ModCompatBaseResponse {
 }
 
 export interface ModCompatNativeResponse extends ModCompatBaseResponse {
-	type: 'NATIVE';
+	type: 'native';
 	game_version: string;
 }
 
 export interface ModCompatUnavailableResponse extends ModCompatBaseResponse {
-	type: 'UNAVAILABLE';
+	type: 'unavailable';
 	loader: string;
 	game_version: string;
 }
@@ -58,7 +58,8 @@ async function getModCompatibility(slug: string): Promise<ModCompatResponse> {
 	try {
 		const body = {
 			platform: PLATFORM,
-			id: slug
+			id: slug,
+			game_version: '1.21.1'
 		};
 
 		const resp = await fetch(ENDPOINT + '/api/v1/probe', {

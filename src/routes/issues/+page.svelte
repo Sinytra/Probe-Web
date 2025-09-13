@@ -17,13 +17,13 @@
 	</p>
 
 	<p>
-		In these cases, <b>issues should be reported to Connector itself</b> rather than the mod
-		author, unless otherwise explictly stated.
+		In these cases, <b>issues should be reported to Connector itself</b> rather than the mod author,
+		unless otherwise explictly stated.
 	</p>
 
 	<p>
-		The original link to the issue tracker is as follows. Click one of the buttons below to
-		continue or to open Connector's issue tracker instead <i>(recommended)</i>.
+		The original link to the issue tracker is as follows. Click one of the buttons below to continue
+		or to open Connector's issue tracker instead <i>(recommended)</i>.
 	</p>
 
 	<p class="mt-5 fw-semibold text-center">
@@ -32,14 +32,10 @@
 
 	<div class="d-flex flex-row gap-2 justify-content-center mt-5">
 		<a href={CONNECTOR_ISSUE_TRACKER}>
-			<Button color="primary">
-				Report to Connector
-			</Button>
+			<Button color="primary">Report to Connector</Button>
 		</a>
 		<a href={destination}>
-			<Button color="secondary">
-				Continue to page
-			</Button>
+			<Button color="secondary">Continue to page</Button>
 		</a>
 	</div>
 </CenteredContainer>
