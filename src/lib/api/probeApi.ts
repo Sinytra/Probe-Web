@@ -58,7 +58,7 @@ async function getModCompatibility(slug: string): Promise<ModCompatResponse> {
 	try {
 		const body = {
 			platform: PLATFORM,
-			id: slug,
+			slug,
 			game_version: '1.21.1'
 		};
 
